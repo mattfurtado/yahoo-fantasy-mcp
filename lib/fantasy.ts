@@ -135,12 +135,13 @@ export class Fantasy {
     const lg = await this.league(
       `league/${lk}/players;player_keys=${playerKeys.slice(0, 25).join(",")}/stats${typ}`,
     );
-    return items(lg.players, "player").map((p) => ({
-      ...playerSummary(p),
-      raw_stats: Object.fromEntries(
+    return items(lg.players, "player").map((p) => {
+      const s: Record<string, any> = playerSummary(p);
+      s.raw_stats = Object.fromEntries(
         (p.player_stats?.stats ?? []).map((x: any) => [String(x.stat.stat_id), num(x.stat.value)]),
-      ),
-    }));
+      );
+      return s;
+    });
   }
 
   async transactions(count = 20, league?: string) {
