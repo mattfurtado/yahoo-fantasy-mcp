@@ -1,0 +1,25 @@
+{
+  "name": "yahoo-fantasy-mcp",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Remote MCP server for Yahoo Fantasy Football, deployable to Vercel",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "mcp-handler": "^2.0.0",
+    "next": "latest",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}
