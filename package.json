@@ -10,7 +10,9 @@
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test test/*.test.ts"
   },
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.4.0",
     "mcp-handler": "^2.4.0",
@@ -20,6 +22,7 @@
   "devDependencies": {
     "@types/node": "^22",
     "tsx": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@types/react": "19.3.0"
   }
 }

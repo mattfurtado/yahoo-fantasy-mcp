@@ -29,7 +29,7 @@ Every tool takes an optional `league` (an ID like `123456` or a key like `461.l.
 
 **2. Install**
 ```bash
-cd yahoo-fantasy-mcp
+cd yahoo-fantasy-mcp/python
 uv sync            # or: python -m venv .venv && .venv/bin/pip install "mcp[cli]" httpx
 ```
 
@@ -46,7 +46,7 @@ Approve in the browser, then paste the code. If you used the localhost redirect,
   "mcpServers": {
     "yahoo-fantasy": {
       "command": "uv",
-      "args": ["--directory", "/ABSOLUTE/PATH/yahoo-fantasy-mcp", "run", "server.py"],
+      "args": ["--directory", "/ABSOLUTE/PATH/yahoo-fantasy-mcp/python", "run", "server.py"],
       "env": {
         "YAHOO_CLIENT_ID": "...",
         "YAHOO_CLIENT_SECRET": "...",
